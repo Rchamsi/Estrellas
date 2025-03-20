@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para ti, Mauge</title>
+</head>
+<body>
+    <h1>Para ti</h1>
+    
+    <audio id="background-audio" src="cancion.mp3" autoplay loop muted></audio>
+
+    <script>
+        document.addEventListener("click", function() {
+            let audio = document.getElementById("background-audio");
+            audio.muted = false;  // Se activa el sonido
+            audio.play().catch(error => console.log("Error al reproducir el audio:", error));
+        }, { once: true }); // Se ejecuta solo una vez
+    </script>
+</body>
+</html>
